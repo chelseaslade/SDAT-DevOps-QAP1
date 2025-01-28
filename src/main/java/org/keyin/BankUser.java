@@ -2,14 +2,15 @@ package org.keyin;
 
 public class BankUser {
     protected int id;
+    private static int serial = 0001;
     protected String fName;
     protected String lName;
-    protected double balance;
+    protected double balance = 0.00;
 
     //Constructors
-    public BankUser(int id, String fName, String lName, double balance)
+    public BankUser(String fName, String lName)
     {
-        this.id = id;
+        this.id = serial++;
         this.fName = fName;
         this.lName = lName;
         this.balance = balance;
