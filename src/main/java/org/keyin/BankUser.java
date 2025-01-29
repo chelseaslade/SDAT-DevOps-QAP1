@@ -2,20 +2,21 @@ package org.keyin;
 
 public class BankUser {
     protected int id;
+    private static int serial = 1;
     protected String fName;
     protected String lName;
-    protected double balance;
+    protected double balance = 0.00;
 
     //Constructors
-    public BankUser(int id, String fName, String lName, double balance)
+    public BankUser(String fName, String lName)
     {
-        this.id = id;
+        this.id = serial++;
         this.fName = fName;
         this.lName = lName;
         this.balance = balance;
     }
 
-    //Methods
+    //Basic Methods
     public String getfName()
     {
         return this.fName;
@@ -24,6 +25,11 @@ public class BankUser {
     public String getlName()
     {
         return this.lName;
+    }
+
+    public String getFullName()
+    {
+        return this.fName + " " + this.lName;
     }
 
     public int getId()
@@ -60,5 +66,14 @@ public class BankUser {
         return "Name: " + this.fName + " " +  this.lName + ", ID: " + this.id + ", Balance: " + this.balance;
     }
 
+    //Banking Methods
+    public void depositFunds(double amount)
+    {
+        this.balance += amount;
+    }
 
+    public void withdrawFunds(double amount)
+    {
+        this.balance -= amount;
+    }
 }
