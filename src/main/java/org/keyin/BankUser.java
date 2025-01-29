@@ -63,7 +63,7 @@ public class BankUser {
 
     public String toString()
     {
-        return "Name: " + this.fName + " " +  this.lName + ", ID: " + this.id + ", Balance: " + this.balance;
+        return "Name: " + this.fName + " " +  this.lName + ", ID: " + this.id + ", Balance: $" + this.balance;
     }
 
     //Banking Methods
