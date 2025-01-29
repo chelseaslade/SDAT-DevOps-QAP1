@@ -68,10 +68,12 @@ public class BankUser {
 
     //Banking Methods
     public void depositFunds(double amount)
-    {}
+    {
+        this.balance += amount;
+    }
 
     public void withdrawFunds(double amount)
-    {}
-
-
+    {
+        this.balance -= amount;
+    }
 }
