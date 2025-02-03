@@ -103,6 +103,7 @@ public class Main {
                             break;
                         }
                     }
+                    break;
                 }
             } else if (mainMenuSelect == 3) {
                 mainMenuLoop = false;
