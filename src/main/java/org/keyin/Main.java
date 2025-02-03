@@ -25,7 +25,10 @@ public class Main {
 
         //Main Menu Loop
         boolean mainMenuLoop = true;
-        while (mainMenuLoop = true) {
+        //Secondary Loop
+        boolean accessLoop = true;
+
+        while (mainMenuLoop) {
             System.out.println("CLI Simple Banking Application");
             System.out.println("Select an option from the menu below: (1, 2, or 3) ");
             System.out.println("1. Create Account");
@@ -53,11 +56,8 @@ public class Main {
 
                 BankUser selectedUser = bankAccounts.get(id);
 
-                //Secondary Loop
-                boolean accessLoop = true;
-
                 //Banking Menu
-                while (accessLoop = true) {
+                while (accessLoop) {
                     System.out.println("Select an option below: ");
                     System.out.println("1. View Account Balance");
                     System.out.println("2. Deposit Funds");
@@ -103,7 +103,6 @@ public class Main {
                             break;
                         }
                     }
-                    break;
                 }
             } else if (mainMenuSelect == 3) {
                 mainMenuLoop = false;
